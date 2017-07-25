@@ -36,8 +36,8 @@
 // 设置位置经纬度
 // command 中的值：
 // latitude  : 纬度
-// longitude : 经度  
-- (void)setLocation:(CDVInvokedUrlCommand*)command;  
+// longitude : 经度
+- (void)setLocation:(CDVInvokedUrlCommand*)command;
 
 // 设置是否在控制台（iOS）/LogCat（Android）中打印运行时日志
 // command 中的值：
@@ -47,7 +47,7 @@
 // 是否开启反作弊功能
 // command 中的值：
 // enabled   : true or false
-- (void)setAntiCheatingEnabled:(CDVInvokedUrlCommand*)command;
+// - (void)setAntiCheatingEnabled:(CDVInvokedUrlCommand*)command;
 
 // 注册事件
 // command 中的值：
@@ -67,7 +67,7 @@
 // command 中的值：
 // eventId   : 自定义事件的 eventId
 - (void)onEvent:(CDVInvokedUrlCommand*)command;
-    
+
 // 触发自定义事件
 // command 中的值：
 // eventId:    自定义事件的 eventId

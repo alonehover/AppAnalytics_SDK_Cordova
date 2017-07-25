@@ -127,7 +127,7 @@ typedef NS_ENUM(NSUInteger, TDAccountType) {
  *  是否开启反作弊功能
  *	@param 	enabled 	默认是开启状态
  */
-+ (void)setAntiCheatingEnabled:(BOOL)enabled;
+// + (void)setAntiCheatingEnabled:(BOOL)enabled;
 
 /**
  *  @method onRegister  注册
@@ -168,8 +168,8 @@ typedef NS_ENUM(NSUInteger, TDAccountType) {
  *  @param  eventLabel  事件标签（自定义）
  *  @param  parameters  事件参数 (key只支持NSString, value支持NSString和NSNumber)
  */
-+ (void)trackEvent:(NSString *)eventId 
-             label:(NSString *)eventLabel 
++ (void)trackEvent:(NSString *)eventId
+             label:(NSString *)eventLabel
         parameters:(NSDictionary *)parameters;
 
 /**
@@ -249,7 +249,7 @@ typedef NS_ENUM(NSUInteger, TDAccountType) {
  *  @method setDeviceToken              设置DeviceToken
  *  @param  deviceToken                 从Apple获取的DeviceToken
  */
-+ (void)setDeviceToken:(NSData *)deviceToken;
+// + (void)setDeviceToken:(NSData *)deviceToken;
 
 /**
  *  @method handlePushMessage           处理来自TalkingData的Push消息
@@ -257,6 +257,6 @@ typedef NS_ENUM(NSUInteger, TDAccountType) {
  *  @return YES                         来自TalkingData的消息，SDK已处理
  *          NO                          其他来源消息，开发者需自行处理
  */
-+ (BOOL)handlePushMessage:(NSDictionary *)message;
+// + (BOOL)handlePushMessage:(NSDictionary *)message;
 
 @end

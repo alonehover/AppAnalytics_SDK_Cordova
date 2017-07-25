@@ -37,7 +37,7 @@
             return object;
         }
     }
-    
+
     return nil;
 }
 
@@ -88,14 +88,14 @@
     [TalkingData setLatitude:latitude longitude:longitude];
 }
 
-- (void)setAntiCheatingEnabled:(CDVInvokedUrlCommand*)command {
-    NSString *arg0 = [command.arguments objectAtIndex:0];
-    if (arg0 == nil || [arg0 isKindOfClass:[NSNull class]]) {
-        return;
-    }
-    BOOL enabled = [arg0 boolValue];
-    [TalkingData setAntiCheatingEnabled:enabled];
-}
+// - (void)setAntiCheatingEnabled:(CDVInvokedUrlCommand*)command {
+//     NSString *arg0 = [command.arguments objectAtIndex:0];
+//     if (arg0 == nil || [arg0 isKindOfClass:[NSNull class]]) {
+//         return;
+//     }
+//     BOOL enabled = [arg0 boolValue];
+//     [TalkingData setAntiCheatingEnabled:enabled];
+// }
 
 - (void)setLogEnability:(CDVInvokedUrlCommand*)command {
     NSString *arg0 = [command.arguments objectAtIndex:0];
@@ -248,7 +248,7 @@
     if (pageName == nil || [pageName isKindOfClass:[NSNull class]]) {
         return;
     }
-    
+
     if (self.currPageName) {
         [TalkingData trackPageEnd:self.currPageName];
     }
@@ -281,7 +281,7 @@
     for (NSDictionary *item in items) {
         [order addItem:item[@"itemId"] category:item[@"category"] name:item[@"name"] unitPrice:[item[@"unitPrice"] intValue] amount:[item[@"amount"] intValue]];
     }
-    
+
     return order;
 }
 
@@ -292,7 +292,7 @@
     for (NSDictionary *item in items) {
         [shoppingCart addItem:item[@"itemId"] category:item[@"category"] name:item[@"name"] unitPrice:[item[@"unitPrice"] intValue] amount:[item[@"amount"] intValue]];
     }
-    
+
     return shoppingCart;
 }
 

@@ -26,26 +26,26 @@ public class TalkingDataPlugin extends CordovaPlugin {
 	Activity act;
 	Context ctx;
 	String currPageName;
-	
+
 	@Override
 	public void initialize(CordovaInterface cordova, CordovaWebView webView) {
 		super.initialize(cordova, webView);
 		this.act = cordova.getActivity();
 		this.ctx = cordova.getActivity().getApplicationContext();
 	}
-	
+
 	@Override
 	public void onResume(boolean multitasking) {
 		super.onResume(multitasking);
 		TCAgent.onResume(act);
 	}
-	
+
 	@Override
 	public void onPause(boolean multitasking) {
 		super.onPause(multitasking);
 		TCAgent.onPause(act);
 	}
-	
+
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 		if (action.equals("init")) {
@@ -54,11 +54,12 @@ public class TalkingDataPlugin extends CordovaPlugin {
 			String channelId = args.getString(1);
 			TCAgent.init(ctx, appKey, channelId);
 			return true;
-        } else if (action.equals("setAntiCheatingEnabled")) {
-            // 是否开启反作弊功能
-            boolean enabled = args.getBoolean(0);
-            TCAgent.setAntiCheatingEnabled(ctx, enabled);
-            return true;
+        }
+		// else if (action.equals("setAntiCheatingEnabled")) {
+        //     // 是否开启反作弊功能
+        //     boolean enabled = args.getBoolean(0);
+        //     TCAgent.setAntiCheatingEnabled(ctx, enabled);
+        //     return true;
         } else if (action.equals("onRegister")) {
             // 注册事件
             String accountId = args.getString(0);
@@ -160,10 +161,10 @@ public class TalkingDataPlugin extends CordovaPlugin {
 			String deviceId = TCAgent.getDeviceId(ctx);
 			callbackContext.success(deviceId);
 			return true;
-		} 
+		}
 		return false;
 	}
-	
+
     private TDAccount.AccountType intToAccountType(final int type) {
         switch (type) {
             case 0:
@@ -204,7 +205,7 @@ public class TalkingDataPlugin extends CordovaPlugin {
                 return TDAccount.AccountType.ANONYMOUS;
         }
     }
-    
+
 	private Map<String, Object> toMap(String jsonStr)
 	{
 		Map<String, Object> result = new HashMap<String, Object>();
@@ -224,7 +225,7 @@ public class TalkingDataPlugin extends CordovaPlugin {
 		}
 		return result;
 	}
-    
+
     private Order stringToOrder(String orderStr) {
         try {
             JSONObject orderJson = new JSONObject(orderStr);
@@ -240,7 +241,7 @@ public class TalkingDataPlugin extends CordovaPlugin {
         }
         return null;
     }
-    
+
     private ShoppingCart stringToShoppingCart(String shoppingCartStr) {
         try {
             JSONObject shoppingCartJson = new JSONObject(shoppingCartStr);

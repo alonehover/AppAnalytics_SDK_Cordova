@@ -1,5 +1,5 @@
-/*  
-    Javascript interface of Cordova plugin for TalkingData Analytics SDK 
+/*
+    Javascript interface of Cordova plugin for TalkingData Analytics SDK
 */
 
 var TalkingData = {
@@ -11,9 +11,9 @@ var TalkingData = {
         cordova.exec(null, null, "TalkingData", "init", [appKey, channelId]);
     },
 
-    setAntiCheatingEnabled:function(enabled) {
-        cordova.exec(null, null, "TalkingData", "setAntiCheatingEnabled", [enabled]);
-    },
+    // setAntiCheatingEnabled:function(enabled) {
+    //     cordova.exec(null, null, "TalkingData", "setAntiCheatingEnabled", [enabled]);
+    // },
 
     AccountType: {
         ANONYMOUS   : 0,
