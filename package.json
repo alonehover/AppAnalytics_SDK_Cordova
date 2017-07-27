@@ -1,14 +1,18 @@
 {
-  "name": "appanalytics",
-  "version": "4.0.0",
-  "description": "",
-  "main": "TalkingData.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "TalkingData"
-  ],
-  "author": "TalkingData",
-  "license": "ISC"
+    "name": "appanalytics",
+    "version": "4.0.5",
+    "description": "",
+    "main": "TalkingData.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "TalkingData"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/alonehover/tff-talkingdata.git"
+    },
+    "author": "TalkingData",
+    "license": "ISC"
 }
