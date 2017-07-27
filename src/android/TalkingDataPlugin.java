@@ -60,7 +60,8 @@ public class TalkingDataPlugin extends CordovaPlugin {
         //     boolean enabled = args.getBoolean(0);
         //     TCAgent.setAntiCheatingEnabled(ctx, enabled);
         //     return true;
-        } else if (action.equals("onRegister")) {
+        // } 
+		else if (action.equals("onRegister")) {
             // 注册事件
             String accountId = args.getString(0);
             TDAccount.AccountType type = this.intToAccountType(args.getInt(1));
